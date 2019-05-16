@@ -7,7 +7,7 @@
 		"server": "nodemon index.js",
 		"test": "cross-env DB_ENV=testing jest --watch",
 		"start": "node index.js"
-	  },
+	},
 	"jest": {
 		"testEnvironment": "node"
 	},
@@ -32,6 +32,7 @@
 		"express": "^4.16.4",
 		"knex": "^0.16.5",
 		"nodemon": "^1.19.0",
+		"pg": "^7.11.0",
 		"sqlite3": "^4.0.8"
 	}
 }
