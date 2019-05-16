@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const db = require('./doggos-model.js');
 
-//Get Doggos.
+//Get Doggos. **Postman Tested: Working**
 router.get('/', (req, res) => {
     db.get()
     .then(doggos => {
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     });
 });
 
-//Add Doggo.
+//Add Doggo. **Postman Tested: Working**
 router.post('/', (req, res) => {
     const newDoggo = req.body;
 
@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
     };
 });
 
-//Delete Doggo.
+//Delete Doggo. **Postman Tested: Working**
 router.delete('/:id', (req, res) => {
     const id = req.params.id;
 
@@ -45,3 +45,5 @@ router.delete('/:id', (req, res) => {
         res.status(500).json(err.message)
     });
 });
+
+module.exports = router;

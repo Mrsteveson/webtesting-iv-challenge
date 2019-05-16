@@ -12,7 +12,7 @@ server.use('/api/doggos', doggosRouter);
 
 // Server Test. Hello Msg.
 server.get('/', (req, res) => {
-    res.send({ message: 'Hello from Patty. BE Week4-Day4 Project'})
+    res.status(200).send({ message: 'Hello from Patty. BE Week4-Day4 Project'})
 });
 
 module.exports = server;
