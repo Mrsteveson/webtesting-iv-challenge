@@ -65,5 +65,13 @@ describe('doggos router', () => {
         });
     });
 
-    
+    //checking something with heroku deployment
+    it('POST should return code:201', () => {
+        return request(server)
+        .post('/api/doggos')
+        .send({ name: 'vincent', status: 'good boi'})
+        .then(res => {
+            expect(res.status).toBe(201);
+        });
+    });
 });
